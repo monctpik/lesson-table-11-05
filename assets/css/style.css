@@ -91,5 +91,7 @@ tfoot tr button:nth-child(n) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border: 0.7px solid grey;
+    color: grey;
     background-color: var(--medium-color)
 }
