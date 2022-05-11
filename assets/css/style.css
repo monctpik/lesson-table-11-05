@@ -3,27 +3,55 @@
     --light-color:#ececec;
     --medium-color:#dbdbdb;
     --radius: 8px;
+    font-family: sans-serif;
+    font-size: 14px;
 
 }
 table{
     /* display: table; */
-    min-width: 400px;
+    min-width: 480;
     width: 100%;
     max-width: 900px;
     margin: auto;
     border-collapse: collapse;
     
 }
+
 td{
+    padding: 1em 0;
     background-color: var(--lighttest-color);
+    text-align: center;
+    vertical-align: center;
 }
+td::first-letter{
+    text-transform: uppercase;
+}
+
+thead th{
+    color: var(--lighttest-color);
+    font-size: 1.2em;
+}
+
 thead th:first-child{
     border-top-left-radius: var(--radius);
     background-color: #7987ac;
 }
+thead th:first-child::first-letter,
+td::first-letter{
+    text-transform: uppercase;
+}
+thead th:nth-child(2){
+    background-color: #4f628d;
+}
+thead th:nth-child(3){
+    background-color: #2f4173;
+}
+thead th:nth-child(4){
+    background-color: #1c1960;
+}
 thead th:last-child{
     border-top-right-radius: var(--radius);
-    background-color: #07153a;
+    background-color: #162954;
 }
 tfoot td:first-child{
     border-bottom-left-radius: var(--radius);
@@ -31,5 +59,37 @@ tfoot td:first-child{
 }
 tfoot td:last-child{
     border-bottom-right-radius: var(--radius);
-    background-color: #var(--light-color);
+    background-color: var(--light-color);
+}
+tbody td:first-child{
+    padding-left: 1em;
+    text-align: left;
+
+}
+thead th:not(th:first-child){
+    width: 18%;
+}
+tbody tr:nth-child(odd) td:nth-child(odd),
+tfoot tr:nth-child(odd) td:nth-child(odd){
+    background-color: var(--medium-color)
+}
+tbody tr:nth-child(odd) td:nth-child(even),
+tbody tr:nth-child(even) td:nth-child(odd),
+tfoot tr:nth-child(odd) td:nth-child(even){
+    background-color: var(--light-color)
+}
+tbody tr{
+    font-size: 0.9em;
+}
+thead p:nth-child(2){
+    font-size: 2em;
+}
+tfoot tr button:nth-child(n) {
+    width: 8em;
+    height: 3em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: var(--medium-color)
 }
